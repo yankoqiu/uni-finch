@@ -7,10 +7,14 @@ export default defineConfig({
 
     build: {
         lib: {
-            entry: "./js_sdk/index.ts",
+            entry: {
+                "net-finch": "./js_sdk/index.ts",
+                "net-cache": "./js_sdk/plugins/cache/index.ts",
+            },
             name: "net-finch",
             formats: ["es"],
-            fileName: "net-finch"
-        }
+            fileName: "index"
+        },
+        rollupOptions: {}
     }
 });
